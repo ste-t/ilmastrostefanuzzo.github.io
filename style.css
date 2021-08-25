@@ -37,6 +37,10 @@ code {
     border-radius: 4px;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 .center {
     display: flex;
     justify-content: center;

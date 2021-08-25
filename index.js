@@ -1,11 +1,12 @@
 // Check if an element is inside the viewport
-function isInViewport(element) {
+function isInViewport(element, h) {
     const rect = element.getBoundingClientRect();
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
         rect.bottom <=
-            (window.innerHeight || document.documentElement.clientHeight) &&
+            (window.innerHeight / (100 / h) ||
+                document.documentElement.clientHeight / (100 / h)) &&
         rect.right <=
             (window.innerWidth || document.documentElement.clientWidth)
     );
@@ -24,14 +25,12 @@ class Typewriter {
     typewriter() {
         let target = document.getElementById(this.id);
         let result = target.getAttribute("data-anim-result"); // End result, fetched from the data-anim-result HTML attribute
-        let no_anim = ""; // (Optional) do not animate this part, just print it out
-        if (target.getAttribute("data-no-anim")) {
-            // Check if a data-no-anim has been specified for this element and assign the value to no_anim
-            no_anim = target.getAttribute("data-no-anim");
-        }
+        let no_anim = target.innerHTML == "&nbsp;" ? "" : target.innerHTML; // Do not animate whatever is in the innerHTML
         let current = no_anim; // Current animation status
 
         let anim_id = setInterval(frame, this.speed); // Repeat animation frames
+
+        target.classList.remove("hidden");
 
         // Where the animation magic happens
         function frame() {
@@ -71,10 +70,11 @@ function typewriter_spawn(id, speed) {
 
 function handle_scroll_animation() {
     // * Insert actions here
-    if (isInViewport(document.getElementById("whoami"))) {
-        typewriter_spawn("whoami", 60);
+    if (isInViewport(document.getElementById("whoami"), 50)) {
+        typewriter_spawn("whoami", 140);
     }
-    if (isInViewport(document.getElementById("introduction"))) {
+
+    if (isInViewport(document.getElementById("whoami"), 50)) {
         typewriter_spawn("introduction", 12);
     }
 }
