@@ -3,6 +3,9 @@
 }
 
 body {
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: #282d35;
     color: white;
 }
@@ -36,7 +39,11 @@ code {
 
 div.page {
     position: relative;
-    height: 95vh;
+    height: 100vh;
+}
+
+h1.page {
+    margin: 0px;
 }
 
 #hello_friend {
