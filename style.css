@@ -29,15 +29,22 @@ code {
     border-radius: 4px;
 }
 
-/*.center {
-    text-align: center;
-}*/
+.center {
+    display: flex;
+    justify-content: center;
+}
 
-div.pg1 {
-    /*margin-top: 50vmax;
-    margin-bottom: 50vmax;*/
-    background-color: blue;
+div.page {
+    position: relative;
     height: 100vh;
+}
+
+#hello_friend {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
 }
 
 /*@media only screen and (max-width: 600px) {
