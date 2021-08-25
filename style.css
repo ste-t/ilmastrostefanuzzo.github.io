@@ -2,6 +2,11 @@
     font-family: "Fira Code", monospace;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding-left: 10px;
@@ -39,15 +44,15 @@ code {
 
 div.page {
     position: relative;
-    height: 100vh;
+    height: 100%;
 }
 
-h1.page {
+.nomargin {
     margin: 0px;
 }
 
 #hello_friend {
-    margin: 0;
+    margin: 0px;
     position: absolute;
     top: 50%;
     -ms-transform: translate(0%, -50%);
