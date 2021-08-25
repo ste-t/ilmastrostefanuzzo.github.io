@@ -1,0 +1,47 @@
+* {
+    font-family: "Fira Code", monospace;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
+
+body {
+    background-color: #282d35;
+    color: white;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+code {
+    background-color: #3b3f4a;
+    border: 1px solid #3b3f4a;
+    display: inline-block;
+    padding-right: 0.6%;
+    padding-left: 0.6%;
+    padding-top: 0%;
+    padding-bottom: 0.1%;
+    border-radius: 4px;
+}
+
+.center {
+    text-align: center;
+}
+
+div.pg1 {
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
+
+/*@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}*/
