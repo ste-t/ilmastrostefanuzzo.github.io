@@ -1,24 +1,3 @@
-/*
-var lastScrollTop = pageYOffset || scrollTop;
-
-// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
-document.addEventListener(
-    "scroll",
-    function () {
-        // or window.addEventListener("scroll"....
-        var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-        if (st > lastScrollTop) {
-            // downscroll code
-            console.log("DOWN");
-        } else {
-            // upscroll code
-            console.log("UP");
-        }
-        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-    },
-    false
-);*/
-
 // Check if an element is inside the viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
