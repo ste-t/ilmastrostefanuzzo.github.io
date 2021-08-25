@@ -1,7 +1,5 @@
 * {
     font-family: "Fira Code", monospace;
-    padding-left: 0.5%;
-    padding-right: 0.5%;
 }
 
 body {
@@ -22,7 +20,7 @@ body {
 
 code {
     background-color: #3b3f4a;
-    border: 1px solid #3b3f4a;
+    /*border: 1px solid #3b3f4a;*/
     display: inline-block;
     padding-right: 0.6%;
     padding-left: 0.6%;
@@ -31,13 +29,15 @@ code {
     border-radius: 4px;
 }
 
-.center {
+/*.center {
     text-align: center;
-}
+}*/
 
 div.pg1 {
-    margin-top: 50vmax;
-    margin-bottom: 50vmax;
+    /*margin-top: 50vmax;
+    margin-bottom: 50vmax;*/
+    background-color: blue;
+    height: 100vh;
 }
 
 /*@media only screen and (max-width: 600px) {
