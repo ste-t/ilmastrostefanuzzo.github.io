@@ -36,8 +36,8 @@ code {
 }
 
 div.pg1 {
-    margin-top: 50vh;
-    margin-bottom: 50vh;
+    margin-top: 50vmax;
+    margin-bottom: 50vmax;
 }
 
 /*@media only screen and (max-width: 600px) {
