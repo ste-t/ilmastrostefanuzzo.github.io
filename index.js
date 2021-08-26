@@ -4,8 +4,6 @@ function isInViewport(element) {
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
-        // 4 : 100 = X : a
-        // X = a * 4 / 100
         rect.bottom <=
             (window.innerHeight / 2 ||
                 document.documentElement.clientHeight / 2) &&
