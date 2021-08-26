@@ -1,12 +1,14 @@
 // Check if an element is inside the viewport
-function isInViewport(element, h) {
+function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
+        // 4 : 100 = X : a
+        // X = a * 4 / 100
         rect.bottom <=
-            (window.innerHeight / (100 / h) ||
-                document.documentElement.clientHeight / (100 / h)) &&
+            (window.innerHeight / 2 ||
+                document.documentElement.clientHeight / 2) &&
         rect.right <=
             (window.innerWidth || document.documentElement.clientWidth)
     );
@@ -70,11 +72,11 @@ function typewriter_spawn(id, speed) {
 
 function handle_scroll_animation() {
     // * Insert actions here
-    if (isInViewport(document.getElementById("whoami"), 50)) {
+    if (isInViewport(document.getElementById("whoami"))) {
         typewriter_spawn("whoami", 140);
     }
 
-    if (isInViewport(document.getElementById("whoami"), 50)) {
+    if (isInViewport(document.getElementById("whoami"))) {
         typewriter_spawn("introduction", 12);
     }
 }
