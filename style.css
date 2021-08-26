@@ -51,6 +51,11 @@ div.page {
     height: 100%;
 }
 
+div.halfpage {
+    position: relative;
+    height: 51%;
+}
+
 .nomargin {
     margin: 0px;
 }
