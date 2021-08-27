@@ -41,9 +41,44 @@ code {
     visibility: hidden;
 }
 
+.bold {
+    font-weight: 900;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Sizes */
+.small {
+    font-size: 20px;
+}
+
+.medium {
+    font-size: 28px;
+}
+
+.big {
+    font-size: 35px;
+}
+
+.bigger {
+    font-size: 50px;
+}
+
+.jura {
+    font-family: "Jura", sans-serif;
+}
+
 .center {
     display: flex;
     justify-content: center;
+}
+
+div {
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    /*background-color: darkslateblue;*/
 }
 
 div.page {
@@ -69,8 +104,49 @@ div.halfpage {
     text-align: center;
 }
 
-/*@media only screen and (max-width: 600px) {
-    body {
-        background-color: lightblue;
-    }
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 20px;
+    grid-gap: 40px;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.card {
+    background-color: #3a3d49;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+}
+
+.card .details {
+    margin-left: 10px;
+}
+
+.card .container {
+    position: relative;
+    margin-top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+/*.cards .card1 .container::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+
+.cards .card1 > .container::after {
+    background-image: linear-gradient(135deg, #ff616e, #4e94ce);
 }*/
+
+/* End cards */

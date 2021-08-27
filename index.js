@@ -13,19 +13,26 @@ function isInViewport(element) {
 }
 
 class Typewriter {
-    constructor(id, speed) {
-        this.id = id;
+    constructor(element, speed) {
+        this.element = element;
         this.speed = speed;
 
         console.log("Animation");
 
-        this.typewriter(this.id, this.speed);
+        this.typewriter(this.element, this.speed);
     }
 
     typewriter() {
-        let target = document.getElementById(this.id);
-        let result = target.getAttribute("data-anim-result"); // End result, fetched from the data-anim-result HTML attribute
-        let no_anim = target.innerHTML == "&nbsp;" ? "" : target.innerHTML; // Do not animate whatever is in the innerHTML
+        let target = this.element;
+        let no_anim = target.hasAttribute("data-no-anim")
+            ? target.getAttribute("data-no-anim")
+            : ""; // Do not animate the content of data-no-anim
+        let result = target.innerHTML
+            .replace(/\s+/g, " ")
+            .trim()
+            .replace(/&lt; /, "< "); // Animate what is in the innerHTML
+        console.log(result);
+        target.innerHTML = "";
         let current = no_anim; // Current animation status
 
         let anim_id = setInterval(frame, this.speed); // Repeat animation frames
@@ -52,46 +59,42 @@ class Typewriter {
                 }
             }
         }
-        typewriter_played.push(this.id);
+        typewriter_played.push(this.element);
     }
 }
 
 var typewriter_played = new Array(); // Already played animations go here so they won't be played again
 var animations = new Array();
 // * Istantiate a Typewriter object, putting it inside the animations array and delete ended animation objects from the array
-function typewriter_spawn(id, speed) {
-    if (typewriter_played.includes(id)) {
+function typewriter_spawn(element, speed) {
+    if (typewriter_played.includes(element)) {
         // Don't start animation if it has already run
         return;
     }
-    animations.push(new Typewriter(id, speed)); // Istantiate animation object
-    animations.splice(animations.indexOf(id)); // Delete animation object
+    animations.push(new Typewriter(element, speed)); // Istantiate animation object
+    animations.splice(animations.indexOf(element)); // Delete animation object
 }
 
 function handle_scroll_animation() {
     // * Insert actions here
     if (isInViewport(document.getElementById("whoami"))) {
-        typewriter_spawn("whoami", 140);
-    }
-
-    if (isInViewport(document.getElementById("whoami"))) {
-        typewriter_spawn("introduction", 12);
+        typewriter_spawn(document.getElementById("whoami"), 140);
+        typewriter_spawn(document.getElementById("introduction"), 12);
+        document.getElementById("cards").classList.remove("hidden");
     }
 }
 
 // Scroll to the top of the page on reload
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-};
+window.onbeforeunload = () => window.scrollTo(0, 0);
 
 // * Enable scrolling after the hello_friend typewriter animation
-setTimeout(function () {
+setTimeout(() => {
     document.body.setAttribute("scroll", "yes");
     document.body.setAttribute("style", "overflow: initial");
 }, 1100);
 
 // The first animation
-typewriter_spawn("hello_friend", 60);
+typewriter_spawn(document.getElementById("hello_friend"), 60);
 
 // Check if the user is scrolling
 document.addEventListener("scroll", handle_scroll_animation, {

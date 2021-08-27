@@ -8,6 +8,7 @@
 
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap");
         </style>
 
         <link rel="stylesheet" href="style.css" />
@@ -15,31 +16,103 @@
 
     <body scroll="no" style="overflow: hidden">
         <div class="page">
-            <h1 class="nomargin">
-                <div class="center">
-                    <code
-                        data-anim-result="< Hello friend"
-                        id="hello_friend"
-                    ></code>
-                </div>
-            </h1>
+            <div class="big bold center">
+                <code class="hidden" id="hello_friend">< Hello friend</code>
+            </div>
         </div>
 
-        <h1>
-            <code class="hidden" id="whoami" data-anim-result=" whoami"
-                >~ stefano></code
-            >
-        </h1>
+        <div>
+            <div>
+                <code
+                    class="big bold hidden"
+                    id="whoami"
+                    data-no-anim="~ stefano> "
+                    >whoami</code
+                >
+            </div>
 
-        <h3>
-            <code
-                class="hidden"
-                id="introduction"
-                data-anim-result="< Stefano (known online as Il mastro Stefanuzzo), a young computer enthusiast, experienced in a wide range of topics"
-            ></code>
-        </h3>
+            <div>
+                <code class="small bold hidden" id="introduction"
+                    >< Stefano (known online as Il mastro Stefanuzzo), a young
+                    computer enthusiast, experienced in / learning about a wide
+                    range of topics
+                </code>
+            </div>
+        </div>
+
+        <div id="cards" class="cards hidden">
+            <div class="card card1">
+                <div class="container">
+                    <img src="assets/images/card1.jpg" alt="Resistors image" />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Electronics</h3>
+                    <p class="medium bold jura">IR LEDs on fire</p>
+                </div>
+            </div>
+
+            <div class="card card2">
+                <div class="container">
+                    <img src="assets/images/card2.jpeg" alt="fsociety image" />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Pentesting</h3>
+                    <p class="medium bold jura">
+                        Don't pick that USB in the parking lot
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card3">
+                <div class="container">
+                    <img src="assets/images/card3.jpg" alt="image" />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Networking</h3>
+                    <p class="medium bold jura">Hover me</p>
+                </div>
+            </div>
+
+            <div class="card card4">
+                <div class="container">
+                    <img src="assets/images/card4.jpg" alt="image" />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Programming</h3>
+                    <p class="medium bold jura">Hover me</p>
+                </div>
+            </div>
+
+            <div class="card card5">
+                <div class="container">
+                    <img src="assets/images/card5.jpg" alt="image" />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Linux sysadmin</h3>
+                    <p class="medium bold jura">I use Arch btw</p>
+                </div>
+            </div>
+
+            <div class="card card6">
+                <div class="container">
+                    <img src="assets/images/card6.jpg" alt="image" />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Web development</h3>
+                    <p class="medium bold jura">Hover me</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div
+                id="electronics"
+                class="bigger bold jura"
+                data-anim-result="Electronics"
+            ></div>
+        </div>
         <div class="halfpage"></div>
 
-        <script src="index.js"></script>
+        <script defer src="index.js"></script>
     </body>
 </html>
