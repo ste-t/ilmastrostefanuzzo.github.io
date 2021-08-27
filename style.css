@@ -121,6 +121,12 @@ div.halfpage {
     grid-gap: 40px;
 }
 
+@media only screen and (max-width: 500px) {
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
 .card img {
     width: 100%;
     display: block;
@@ -137,10 +143,15 @@ div.halfpage {
     margin-left: 10px;
 }
 
-.details h3 {
+.card .details h3 {
+    margin-left: 15px;
     font-family: "Mr Robot", TrueType;
     font-weight: normal;
     color: #ff2c83;
+}
+
+.card .details p {
+    line-height: 30px;
 }
 
 .card .container {
