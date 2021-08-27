@@ -87,7 +87,6 @@ div {
 }
 
 div.page {
-    position: relative;
     height: 100%;
 }
 
@@ -121,12 +120,6 @@ div.halfpage {
     grid-gap: 40px;
 }
 
-@media only screen and (max-width: 500px) {
-    .cards {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-}
-
 .card img {
     width: 100%;
     display: block;
@@ -158,6 +151,15 @@ div.halfpage {
     position: relative;
     margin-top: 0;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+@media only screen and (max-width: 500px) {
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .card .details h3 {
+        margin-left: 5px;
+    }
 }
 
 /*.cards .card1 .container::after {
