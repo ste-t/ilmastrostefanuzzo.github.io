@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #282d35;
+    background-color: #121018;
     color: white;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 code {
-    background-color: #3b3f4a;
+    background-color: #202024;
     /*border: 1px solid #3b3f4a;*/
     display: inline-block;
     padding-right: 0.6%;
@@ -39,6 +39,15 @@ code {
 
 .hidden {
     visibility: hidden;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 800ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.fade-in.appear {
+    opacity: 1;
 }
 
 .bold {
@@ -88,7 +97,7 @@ div.page {
 
 div.halfpage {
     position: relative;
-    height: 51%;
+    height: 50%;
 }
 
 .nomargin {
@@ -102,6 +111,10 @@ div.halfpage {
     -ms-transform: translate(0%, -50%);
     transform: translate(0%, -50%);
     text-align: center;
+}
+
+#whoami {
+    color: #ff2c83;
 }
 
 /* Cards */
@@ -119,13 +132,17 @@ div.halfpage {
 }
 
 .card {
-    background-color: #3a3d49;
+    background-color: #202024;
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
 }
 
 .card .details {
     margin-left: 10px;
+}
+
+.details h3 {
+    color: #ff2c83;
 }
 
 .card .container {
@@ -138,11 +155,11 @@ div.halfpage {
     content: "";
     height: 100%;
     width: 100%;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     border-radius: 20px 20px 0 0;
-    opacity: 0.7;
+    opacity: 0.3;
 }
 
 .cards .card1 > .container::after {
