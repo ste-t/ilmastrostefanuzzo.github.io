@@ -75,10 +75,6 @@ code {
     font-size: 50px;
 }
 
-.jura {
-    font-family: "Jura", sans-serif;
-}
-
 .center {
     display: flex;
     justify-content: center;
@@ -142,6 +138,8 @@ div.halfpage {
 }
 
 .details h3 {
+    font-family: "Mr Robot", TrueType;
+    font-weight: normal;
     color: #ff2c83;
 }
 
