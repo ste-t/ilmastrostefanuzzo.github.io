@@ -210,7 +210,15 @@ div.halfpage {
     font-size: 14px;
 }
 
+.cards .card .details .hover_hide {
+    display: none;
+}
+
 @media (hover) {
+    .cards .card .details .hover_hide {
+        display: initial;
+    }
+
     .cards .card:hover {
         transform: scale(1.04);
     }
