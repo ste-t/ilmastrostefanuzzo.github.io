@@ -143,10 +143,6 @@ div.halfpage {
     transition: transform 150ms ease-in;
 }
 
-.cards .card:hover {
-    transform: scale(1.04);
-}
-
 .card .details {
     margin-left: 30px;
     padding-right: 30px;
@@ -175,24 +171,8 @@ div.halfpage {
     transition: transform 150ms ease-in;
 }
 
-.cards .card:hover .details h3::after {
-    transform: scaleX(1);
-}
-
 .cards .card .details p {
     line-height: 30px;
-}
-
-.cards .card:hover .details .hover_hide {
-    display: none;
-}
-
-.cards .card:hover .details .hover_txt {
-    display: initial;
-}
-
-.cards .card .details .hover_txt {
-    display: none;
 }
 
 .card .container {
@@ -205,31 +185,6 @@ div.halfpage {
 
 .cards .card .bottom {
     display: none;
-}
-
-.cards .card:hover .bottom {
-    display: initial;
-    visibility: hidden;
-}
-
-.cards .card:hover .container {
-    position: absolute;
-    transform: translateY(-100%);
-}
-
-.cards .card:hover .container::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 20px 20px 0 0;
-    opacity: 0.3;
-}
-
-.cards .card:hover > .container::after {
-    background-image: linear-gradient(135deg, #ff616e, #4e94ce);
 }
 
 .cards ul {
@@ -253,6 +208,53 @@ div.halfpage {
 .cards ul li li::before {
     content: "\25CB\2003";
     font-size: 14px;
+}
+
+@media (hover) {
+    .cards .card:hover {
+        transform: scale(1.04);
+    }
+
+    .cards .card:hover .details h3::after {
+        transform: scaleX(1);
+    }
+
+    .cards .card:hover .details .hover_hide {
+        display: none;
+    }
+
+    .cards .card:hover .details .hover_txt {
+        display: initial;
+    }
+
+    .cards .card .details .hover_txt {
+        display: none;
+    }
+
+    .cards .card:hover .bottom {
+        display: initial;
+        visibility: hidden;
+    }
+
+    .cards .card:hover .container {
+        position: absolute;
+        transform: translateY(-100%);
+    }
+
+    .cards .card:hover .container::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 20px 20px 0 0;
+        opacity: 0.3;
+    }
+
+    .cards .card:hover > .container::after {
+        background-image: linear-gradient(135deg, #ff616e, #4e94ce);
+    }
 }
 
 @media only screen and (max-width: 500px) {
