@@ -149,6 +149,7 @@ div.halfpage {
 
 .card .details {
     margin-left: 30px;
+    padding-right: 30px;
 }
 
 .card .details h3 {
@@ -160,7 +161,7 @@ div.halfpage {
     color: #ff2c83;
 }
 
-.card .details h3::after {
+.cards .card .details h3::after {
     content: "";
     position: absolute;
     height: 4px;
@@ -178,14 +179,42 @@ div.halfpage {
     transform: scaleX(1);
 }
 
-.card .details p {
+.cards .card .details p {
     line-height: 30px;
+}
+
+.cards .card:hover .details .hover_hide {
+    display: none;
+}
+
+.cards .card:hover .details .hover_txt {
+    display: initial;
+}
+
+.cards .card .details .hover_txt {
+    display: none;
 }
 
 .card .container {
     position: relative;
     margin-top: 0;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    transition: transform 150ms ease-in;
+}
+
+.cards .card .bottom {
+    display: none;
+}
+
+.cards .card:hover .bottom {
+    display: initial;
+    visibility: hidden;
+}
+
+.cards .card:hover .container {
+    position: absolute;
+    transform: translateY(-100%);
 }
 
 .cards .card:hover .container::after {
@@ -203,15 +232,39 @@ div.halfpage {
     background-image: linear-gradient(135deg, #ff616e, #4e94ce);
 }
 
+.cards ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cards ul li {
+    padding-left: 1em;
+    text-indent: -0.7em;
+}
+
+.cards ul li::before {
+    content: "\2022"" ";
+    font-style: normal;
+    font-weight: bold;
+    color: #ff2c83;
+}
+
+.cards ul li li::before {
+    content: "\25CB\2003";
+    font-size: 14px;
+}
+
 @media only screen and (max-width: 500px) {
     .cards {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-    .card .details {
+
+    .cards .card .details {
         margin-left: 15px;
     }
 
-    .card .details h3 {
+    .cards .card .details h3 {
         max-width: min-content;
     }
 }
