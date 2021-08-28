@@ -5,8 +5,8 @@ function isInViewport(element) {
         rect.top >= 0 &&
         rect.left >= 0 &&
         rect.bottom <=
-            (window.innerHeight / 2.5 ||
-                document.documentElement.clientHeight / 2.5) &&
+            (window.innerHeight / 2 ||
+                document.documentElement.clientHeight / 2) &&
         rect.right <=
             (window.innerWidth || document.documentElement.clientWidth)
     );
@@ -82,6 +82,22 @@ function handle_scroll_animation() {
         typewriter_spawn(document.getElementById("introduction"), 12);
         //document.getElementById("cards").classList.remove("hidden");
         document.getElementById("cards").classList.add("appear");
+    }
+
+    if (isInViewport(document.getElementById("projects"))) {
+        typewriter_spawn(document.getElementById("projects"), 100);
+        typewriter_spawn(document.getElementById("projects_uncompleted"), 50);
+        setTimeout(() => {
+            document
+                .getElementById("projects_uncompleted1")
+                .classList.remove("hidden");
+            setTimeout(() => {
+                document
+                    .getElementById("uncompleted_comments")
+                    .classList.remove("hidden");
+                document.getElementById("cards1").classList.add("appear");
+            }, 690);
+        }, 1950);
     }
 }
 

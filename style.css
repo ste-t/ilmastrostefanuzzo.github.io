@@ -53,6 +53,14 @@ code {
 /* End fade in*/
 
 /* Text sizes and styles */
+.red {
+    color: #ff2c83;
+}
+
+.grey {
+    color: darkgrey;
+}
+
 .bold {
     font-weight: 900;
 }
@@ -99,7 +107,7 @@ div.page {
 
 div.halfpage {
     position: relative;
-    height: 50%;
+    height: 51%;
 }
 /* End pages */
 
@@ -280,3 +288,18 @@ div.halfpage {
 }
 
 /* End cards */
+
+.projects {
+    margin-top: 50%;
+}
+
+/* Project cards */
+#cards1 {
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+@media only screen and (max-width: 700px) {
+    #cards1 {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
