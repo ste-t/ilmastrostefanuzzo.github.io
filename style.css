@@ -26,9 +26,9 @@ body {
     scrollbar-width: none; /* Firefox */
 }
 
+/* Code blocks */
 code {
     background-color: #202024;
-    /*border: 1px solid #3b3f4a;*/
     display: inline-block;
     padding-right: 0.6%;
     padding-left: 0.6%;
@@ -41,6 +41,7 @@ code {
     visibility: hidden;
 }
 
+/* Fade in */
 .fade-in {
     opacity: 0;
     transition: opacity 800ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
@@ -49,7 +50,9 @@ code {
 .fade-in.appear {
     opacity: 1;
 }
+/* End fade in*/
 
+/* Text sizes and styles */
 .bold {
     font-weight: 900;
 }
@@ -74,11 +77,9 @@ code {
 .bigger {
     font-size: 50px;
 }
+/* End text sizes and styles */
 
-.center {
-    display: flex;
-    justify-content: center;
-}
+/* End sizes */
 
 div {
     margin-top: 0.67em;
@@ -86,14 +87,21 @@ div {
     /*background-color: darkslateblue;*/
 }
 
+/* Pages */
 div.page {
     height: 100%;
+}
+
+.pg1 .center {
+    display: flex;
+    justify-content: center;
 }
 
 div.halfpage {
     position: relative;
     height: 50%;
 }
+/* End pages */
 
 .nomargin {
     margin: 0px;
@@ -120,27 +128,54 @@ div.halfpage {
     grid-gap: 40px;
 }
 
-.card img {
+.cards .card img {
     width: 100%;
     display: block;
     border-radius: 20px 20px 0 0;
 }
 
-.card {
+.cards .card {
     background-color: #202024;
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+
+    transition: transform 150ms ease-in;
+}
+
+.cards .card:hover {
+    transform: scale(1.04);
 }
 
 .card .details {
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .card .details h3 {
-    margin-left: 20px;
+    position: relative;
     font-family: "Mr Robot", TrueType;
     font-weight: normal;
+    width: max-content;
+    max-width: 100%;
     color: #ff2c83;
+}
+
+.card .details h3::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    background: #ff2c83;
+    transform: scaleX(0);
+
+    transform-origin: left;
+    transition: transform 150ms ease-in;
+}
+
+.cards .card:hover .details h3::after {
+    transform: scaleX(1);
 }
 
 .card .details p {
@@ -153,16 +188,7 @@ div.halfpage {
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-@media only screen and (max-width: 500px) {
-    .cards {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-    .card .details h3 {
-        margin-left: 5px;
-    }
-}
-
-/*.cards .card1 .container::after {
+.cards .card:hover .container::after {
     content: "";
     height: 100%;
     width: 100%;
@@ -173,8 +199,21 @@ div.halfpage {
     opacity: 0.3;
 }
 
-.cards .card1 > .container::after {
+.cards .card:hover > .container::after {
     background-image: linear-gradient(135deg, #ff616e, #4e94ce);
-}*/
+}
+
+@media only screen and (max-width: 500px) {
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .card .details {
+        margin-left: 15px;
+    }
+
+    .card .details h3 {
+        max-width: min-content;
+    }
+}
 
 /* End cards */
