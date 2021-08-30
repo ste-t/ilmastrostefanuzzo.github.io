@@ -85,7 +85,7 @@ function handle_scroll_animation() {
     }
 
     if (isInViewport(document.getElementById("projects"))) {
-        typewriter_spawn(document.getElementById("projects"), 100);
+        typewriter_spawn(document.getElementById("projects"), 80);
         typewriter_spawn(document.getElementById("projects_uncompleted"), 50);
         setTimeout(() => {
             document
