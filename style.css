@@ -402,8 +402,10 @@ div.halfpage {
     width: 116px;
 }
 
-.logo img:hover {
-    animation: logo 1s ease-in-out infinite;
+@media (hover) {
+    .logo img:hover {
+        animation: logo 1s ease-in-out infinite;
+    }
 }
 
 @keyframes logo {
