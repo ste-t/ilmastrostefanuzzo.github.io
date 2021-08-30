@@ -7,8 +7,21 @@
         <title>IlmastroStefanuzzo | Hello friend</title>
 
         <style>
-            @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap");
-            @import url("https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap");
+            @font-face {
+                font-family: "Fira Code";
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: url(assets/fonts/firacode/400.ttf) format("truetype");
+            }
+            @font-face {
+                font-family: "Fira Code";
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url(assets/fonts/firacode/600.ttf) format("truetype");
+            }
+
             @font-face {
                 font-family: "Mr Robot";
                 src: url("assets/fonts/mrrobot.ttf");
@@ -16,6 +29,7 @@
         </style>
 
         <link rel="stylesheet" href="style.css" />
+        <script defer src="index.js"></script>
     </head>
 
     <body scroll="no" style="overflow: hidden">
@@ -270,7 +284,5 @@
         </div>
 
         <div class="halfpage"></div>
-
-        <script defer src="index.js"></script>
     </body>
 </html>
