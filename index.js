@@ -80,8 +80,8 @@ function handle_scroll_animation() {
     if (isInViewport(document.getElementById("whoami"))) {
         typewriter_spawn(document.getElementById("whoami"), 140);
         typewriter_spawn(document.getElementById("introduction"), 12);
-        //document.getElementById("cards").classList.remove("hidden");
         document.getElementById("cards").classList.add("appear");
+        // document.getElementById("scroll_down2").classList.add("appear");
     }
 
     if (isInViewport(document.getElementById("projects"))) {
@@ -106,6 +106,7 @@ window.onbeforeunload = () => window.scrollTo(0, 0);
 
 // * Enable scrolling after the hello_friend typewriter animation
 setTimeout(() => {
+    document.getElementById("scroll_down").classList.add("appear");
     document.body.setAttribute("scroll", "yes");
     document.body.setAttribute("style", "overflow: initial");
 }, 1100);

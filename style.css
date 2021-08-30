@@ -124,6 +124,15 @@ div.halfpage {
     text-align: center;
 }
 
+#scroll_down {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
 #whoami {
     color: #ff2c83;
 }
@@ -315,4 +324,23 @@ div.halfpage {
 
 #cards1 .clickme {
     font-size: 18px;
+}
+
+/* End project cards */
+
+/* Arrow */
+.arrow {
+    animation: arrow_slide 1s ease-in-out infinite;
+    margin-left: 9px;
+}
+
+@keyframes arrow_slide {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 10px);
+    }
 }
