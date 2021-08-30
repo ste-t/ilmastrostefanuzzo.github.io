@@ -308,3 +308,11 @@ div.halfpage {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
+
+#cards1 .card1 .details p {
+    margin-bottom: 0;
+}
+
+#cards1 .clickme {
+    font-size: 18px;
+}
