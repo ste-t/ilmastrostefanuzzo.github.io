@@ -1,12 +1,12 @@
 // Check if an element is inside the viewport
-function isInViewport(element) {
+function isInViewport(element, h) {
     const rect = element.getBoundingClientRect();
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
         rect.bottom <=
-            (window.innerHeight / 2 ||
-                document.documentElement.clientHeight / 2) &&
+            (window.innerHeight / h ||
+                document.documentElement.clientHeight / h) &&
         rect.right <=
             (window.innerWidth || document.documentElement.clientWidth)
     );
@@ -77,14 +77,14 @@ function typewriter_spawn(element, speed) {
 
 function handle_scroll_animation() {
     // * Insert actions here
-    if (isInViewport(document.getElementById("whoami"))) {
+    if (isInViewport(document.getElementById("whoami"), 2)) {
         typewriter_spawn(document.getElementById("whoami"), 140);
         typewriter_spawn(document.getElementById("introduction"), 12);
         document.getElementById("cards").classList.add("appear");
         // document.getElementById("scroll_down2").classList.add("appear");
     }
 
-    if (isInViewport(document.getElementById("projects"))) {
+    if (isInViewport(document.getElementById("projects"), 2)) {
         typewriter_spawn(document.getElementById("projects"), 80);
         typewriter_spawn(document.getElementById("projects_uncompleted"), 50);
         setTimeout(() => {
@@ -98,6 +98,18 @@ function handle_scroll_animation() {
                 document.getElementById("cards1").classList.add("appear");
             }, 690);
         }, 1950);
+    }
+
+    if (isInViewport(document.getElementById("duco"), 2)) {
+        typewriter_spawn(document.getElementById("duco"), 45);
+        setTimeout(() => {
+            document.getElementById("cards2").classList.add("appear");
+        }, 960);
+    }
+
+    if (isInViewport(document.getElementById("footer"), 1)) {
+        console.log("SHOSH");
+        document.getElementById("footer").classList.add("appear");
     }
 }
 

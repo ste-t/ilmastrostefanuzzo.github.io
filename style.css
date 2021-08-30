@@ -125,12 +125,16 @@ div.halfpage {
 }
 
 #scroll_down {
-    width: 100%;
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     position: absolute;
+
     bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 #whoami {
@@ -285,6 +289,11 @@ div.halfpage {
         border-radius: 0;
         visibility: visible;
     }
+
+    #cards2 .card:hover .bottom {
+        border-radius: 0;
+        visibility: visible;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -304,7 +313,7 @@ div.halfpage {
 /* End cards */
 
 .projects {
-    margin-top: 50%;
+    margin-top: 25%;
 }
 
 /* Project cards */
@@ -344,3 +353,68 @@ div.halfpage {
         transform: translate(0, 10px);
     }
 }
+/* End arrow */
+
+/* Duco cards */
+
+#cards2 {
+    grid-template-columns: repeat(auto-fit, minmax(600px, 0.45fr));
+}
+
+@media only screen and (max-width: 700px) {
+    #cards2 {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* End duco cards */
+
+/* Footer */
+
+.beer {
+    margin-top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.beer img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 200px;
+    max-width: 20%;
+}
+
+.logo {
+    margin-top: 400px;
+    padding-bottom: 40px;
+    width: 100%;
+
+    display: flex;
+
+    align-content: center;
+    justify-content: center;
+}
+
+.logo img {
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 116px;
+}
+
+.logo img:hover {
+    animation: logo 1s ease-in-out infinite;
+}
+
+@keyframes logo {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+/* End footer */
