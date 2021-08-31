@@ -372,7 +372,7 @@ div.halfpage {
 /* Footer */
 
 .beer {
-    margin-top: 50%;
+    margin-top: 25%;
     width: 100%;
     text-align: center;
 }
@@ -387,7 +387,6 @@ div.halfpage {
 
 .logo {
     margin-top: 400px;
-    padding-bottom: 40px;
     width: 100%;
 
     display: flex;
@@ -417,6 +416,11 @@ div.halfpage {
     50% {
         transform: scale(1.1, 1.1);
     }
+}
+
+#shoutout {
+    text-align: center;
+    padding-bottom: 3px;
 }
 
 /* End footer */
