@@ -4,7 +4,7 @@ This is my first website ever.
 
 ## New website!
 
-I am currently remaking the website to fix glitches and enhance accessibility. The old website will still be available at https://old.stefano.ml
+I am currently remaking the website to fix glitches and enhance accessibility. The old website will still be available at https://stefano.ml/old
 
 ## License
 
