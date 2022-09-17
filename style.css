@@ -22,7 +22,8 @@
 @font-face {
     font-family: "Mr Robot";
     font-display: swap;
-    src: url("assets/fonts/mrrobot.ttf") format("truetype");
+    src: url("assets/fonts/mrrobot/mrrobot.woff2") format("woff2"),
+        url("assets/fonts/mrrobot/mrrobot.ttf") format("truetype");
 }
 
 * {
