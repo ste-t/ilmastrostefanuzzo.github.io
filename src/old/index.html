@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- HTML Meta Tags -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>IlmastroStefanuzzo | Hello friend</title>
+        <meta name="description" content="My portfolio website" />
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://www.stefano.ml/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Il mastro Stefanuzzo" />
+        <meta property="og:description" content="My portfolio website" />
+        <meta
+            property="og:image"
+            content="https://www.stefano.ml/assets/images/pfp.jpg"
+        />
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary" />
+        <meta property="twitter:domain" content="www.stefano.ml" />
+        <meta property="twitter:url" content="https://www.stefano.ml/" />
+        <meta name="twitter:title" content="Il mastro Stefanuzzo" />
+        <meta name="twitter:description" content="My portfolio website" />
+        <meta
+            name="twitter:image"
+            content="https://www.stefano.ml/assets/images/pfp.jpg?twitter"
+        />
+
+        <link
+            rel="preload"
+            href="assets/fonts/mrrobot/mrrobot.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="index.js"></script>
+    </head>
+
+    <body scroll="no" style="overflow: hidden">
+        <div class="page pg1">
+            <div class="big bold center">
+                <code class="hidden" id="hello_friend">< Hello friend</code>
+            </div>
+
+            <div id="scroll_down" class="bold fade-in">
+                <div class="small">Scroll down</div>
+                <div class="big arrow">&#8659;</div>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <code
+                    class="big bold hidden"
+                    id="whoami"
+                    data-no-anim="~ stefano> "
+                    >whoami</code
+                >
+            </div>
+
+            <div>
+                <code class="small bold hidden" id="introduction"
+                    >< Stefano (known online as Il mastro Stefanuzzo), a young
+                    computer enthusiast and open source developer, experienced
+                    in / learning about a wide range of topics
+                </code>
+            </div>
+        </div>
+
+        <div id="cards" class="cards fade-in">
+            <div class="card card1">
+                <div class="container">
+                    <img src="assets/images/card1.jpg" alt="Resistors image" />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Electronics</h3>
+                    <p class="medium bold">IR LEDs on fire</p>
+                </div>
+                <img class="bottom" src="assets/images/card1.jpg" />
+            </div>
+
+            <div class="card card2">
+                <div class="container">
+                    <img src="assets/images/card2.jpeg" alt="fsociety image" />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Pentesting</h3>
+                    <p class="medium bold">
+                        Don't pick that USB in the parking lot
+                    </p>
+                </div>
+                <img class="bottom" src="assets/images/card2.jpeg" />
+            </div>
+
+            <div class="card card3">
+                <div class="container">
+                    <img
+                        src="assets/images/card3.jpg"
+                        alt="Fiber cables image"
+                    />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Networking</h3>
+                    <p class="hover_hide medium bold">Hover me</p>
+
+                    <div class="hover_txt medium bold">
+                        <ul class="italic">
+                            <li>CCNA student</li>
+                        </ul>
+                    </div>
+                </div>
+                <img class="bottom" src="assets/images/card3.jpg" />
+            </div>
+
+            <div class="card card4">
+                <div class="container">
+                    <img
+                        src="assets/images/card4.jpg"
+                        alt="Pc with code editor open image"
+                    />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Programming</h3>
+                    <p class="hover_hide medium bold">Hover me</p>
+                    <div class="hover_txt medium bold">
+                        <ul class="italic">
+                            <li>Rust</li>
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>C#</li>
+                            <li>
+                                Game dev
+                                <ul>
+                                    <li>Construct 2</li>
+                                    <li>Unity</li>
+                                    <li>Godot</li>
+                                    <li>Pygame</li>
+                                    <li>SFML</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <img class="bottom" src="assets/images/card4.jpg" />
+            </div>
+
+            <div class="card card5">
+                <div class="container">
+                    <img
+                        src="assets/images/card5.jpg"
+                        alt="Server racks image"
+                    />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Linux sysadmin</h3>
+                    <p class="medium bold">Guess my distro btw</p>
+                </div>
+                <img class="bottom" src="assets/images/card5.jpg" />
+            </div>
+
+            <div class="card card6">
+                <div class="container">
+                    <img
+                        src="assets/images/card6.jpg"
+                        alt="Webpage code image"
+                    />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Web development</h3>
+                    <p class="hover_hide medium bold">Hover me</p>
+                    <div class="hover_txt medium bold">
+                        <ul class="italic">
+                            <li>
+                                Front-end
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>JS</li>
+                                    <li>CSS</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Back-end
+                                <ul>
+                                    <li>Nginx</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <img class="bottom" src="assets/images/card6.jpg" />
+            </div>
+
+            <div class="card card7">
+                <div class="container">
+                    <img src="assets/images/card7.jpg" alt="Abstract image" />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">General</h3>
+                    <p class="hover_hide medium bold">Hover me</p>
+                    <div class="hover_txt medium bold">
+                        <ul class="italic">
+                            <li>Docker</li>
+                            <li>Git</li>
+                            <li>Google CLoud</li>
+                            <li>
+                                Micro-controllers
+                                <ul>
+                                    <li>Arduino Uno</li>
+                                    <li>ESP32</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <img class="bottom" src="assets/images/card6.jpg" />
+            </div>
+        </div>
+
+        <div class="projects">
+            <div>
+                <code
+                    class="red big bold hidden"
+                    id="projects"
+                    data-no-anim="~ stefano> "
+                    >echo My projects</code
+                >
+            </div>
+
+            <div>
+                <code class="small bold hidden" id="projects_uncompleted">
+                    > ls projects/unfinished/ | wc -l
+                </code>
+                <br />
+
+                <div class="hidden" id="projects_uncompleted1">
+                    <code class="small bold">< 218696</code>
+                    <div class="hidden" id="uncompleted_comments">
+                        <code class="medium bold grey"
+                            ># That's a lot of unfinished projects!</code
+                        ><br />
+                        <code class="medium bold grey"
+                            ># Luckily I've got a few finished ones!</code
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cards1" class="cards fade-in">
+            <div
+                style="cursor: pointer"
+                onclick="window.open('https://github.com/IlmastroStefanuzzo/py_cli_snake')"
+                class="card card1"
+            >
+                <div class="container">
+                    <img src="assets/images/project1.gif" alt="CLI snake gif" />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Command line snake</h3>
+                    <p class="medium bold">
+                        Apples are tasty and who needs a GUI anyways?
+                    </p>
+                    <p class="clickme red bold">clickme</p>
+                </div>
+                <img
+                    class="bottom"
+                    src="assets/images/project1.gif"
+                    alt="CLI snake gif"
+                />
+            </div>
+
+            <div
+                style="cursor: pointer"
+                onclick="window.open('https://github.com/IlmastroStefanuzzo/esp32-alexa-tv-remote')"
+                class="card card2"
+            >
+                <div class="container">
+                    <img
+                        src="assets/images/project2.jpg"
+                        alt="ESP32 remote components image"
+                    />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Alexa-controlled ESP32 remote</h3>
+                    <p class="medium bold">
+                        Imagine needing to move your arm in order to switch
+                        channel
+                    </p>
+                    <p class="clickme red bold">clickme</p>
+                </div>
+                <img
+                    class="bottom"
+                    src="assets/images/project2.gif"
+                    alt="Teared down remote gif"
+                />
+            </div>
+
+            <div
+                style="cursor: pointer"
+                onclick="window.open('https://ilmastrostefanuzzoyt.itch.io/tux-vs-boohwaer')"
+                class="card card3"
+            >
+                <div class="container">
+                    <img
+                        src="assets/images/project3.jpg"
+                        alt="Tux vs Bo'oh'Wa'er image"
+                    />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Tux vs Bo'oh'Wa'er</h3>
+                    <p class="medium bold">
+                        A game made for the #SeaJam, a foundraiser project to
+                        help save the oceans
+                    </p>
+                    <p class="clickme red bold">clickme</p>
+                </div>
+                <img
+                    class="bottom"
+                    src="assets/images/project3.jpg"
+                    alt="Tux vs Bo'oh'Wa'er image"
+                />
+            </div>
+        </div>
+
+        <div class="projects">
+            <div>
+                <code
+                    class="red big bold hidden"
+                    id="duco"
+                    data-no-anim="~ stefano> "
+                    >echo A fantastic project I've contributed to</code
+                >
+            </div>
+        </div>
+
+        <div id="cards2" class="cards fade-in">
+            <div
+                style="cursor: pointer"
+                onclick="window.open('https://duinocoin.com/')"
+                class="card card1"
+            >
+                <div class="container">
+                    <img src="assets/images/duco.jpg" alt="Duino Coin image" />
+                </div>
+                <div class="details">
+                    <h3 class="big bold">Duino coin</h3>
+                    <p class="medium bold">
+                        A coin that can be mined with Arduinos, Raspberry Pis,
+                        routers, smart TVs... literally anything.
+                    </p>
+                    <p class="medium bold">
+                        I translated their software into Italian
+                    </p>
+                    <p class="clickme red bold">clickme</p>
+                </div>
+                <img
+                    class="bottom"
+                    src="assets/images/duco.jpg"
+                    alt="Duino Coin image"
+                />
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="beer small bold">
+                <img src="assets/images/svg/beer.svg" alt="Beer svg" />
+                <p style="font-family: 'Fira Code', monospace">
+                    “Free as in free speech, not free beer”
+                </p>
+            </div>
+
+            <div class="logo small bold">
+                <img
+                    style="cursor: pointer"
+                    onclick="window.open('https://www.youtube.com/channel/UCzv719JmKaLwZhp7hd3vvbg')"
+                    src="assets/images/yt.png"
+                    alt="YouTube logo"
+                />
+                <img
+                    style="cursor: pointer"
+                    onclick="window.open('https://github.com/IlmastroStefanuzzo')"
+                    src="assets/images/github.png"
+                    alt="GitHub logo"
+                />
+            </div>
+
+            <div id="shoutout" class="small bold">
+                Thanks to
+                <a class="red" href="https://unsplash.com" target="_blank"
+                    >unsplash.com</a
+                >
+                and
+                <a class="red" href="https://undraw.co" target="_blank"
+                    >undraw.co</a
+                >
+                for their fantastic images
+            </div>
+        </div>
+    </body>
+</html>
