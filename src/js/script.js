@@ -3,7 +3,7 @@ const typewriter = new Typewriter("#hello_friend_text", {
         "Hello friend",
         "Ciao amico",
         "Bok prijatelju",
-        "Hallo mein Freund",
+        "Hallo Freund",
         "Привіт друже",
         "Salut l'ami",
         "Γεια σου φίλε",
