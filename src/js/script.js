@@ -10,7 +10,7 @@ const typewriter = new Typewriter("#hello_friend_text", {
         "Salut l'ami",
         "Γεια σου φίλε",
         "Hola amigo",
-        "Salut prietene",
+        !Math.random() ? "Сәләм дуҫ" : "Salut prietene",
     ],
     cursor: "_",
     cursorClassName: "typewriter-cursor", // Give it a nice name and remove the default CSS
