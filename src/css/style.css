@@ -1,145 +1,78 @@
-* {
-    font-family: "Fira Code", monospace;
-}
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: #121018;
-    /* background-color: #0d0d0d; */
-    color: white;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-body {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
-
-/* Code blocks */
-code {
-    background-color: #202024;
-    display: inline-block;
-    padding-right: 0.6%;
-    padding-left: 0.6%;
-    padding-top: 0%;
-    padding-bottom: 0.1%;
-    border-radius: 4px;
-}
-
-.hidden {
-    visibility: hidden;
-}
-
-/* Fade in */
-
-.fade-in {
-    /* opacity: 1;
-    transition: opacity 800ms cubic-bezier(0.755, 0.05, 0.855, 0.06); */
-    animation: fadeIn 5700ms ease-in;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    75% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
-/* .fade-in.appear {
-    opacity: 1;
-} */
-
-/* End fade in*/
-
-/* Text sizes and styles */
-.red {
-    color: #ff2c83;
-}
-
-.grey {
-    color: darkgrey;
+:root {
+    --bg-color: #181b22;
+    --code-bg-color: #22242e;
+    --fg-color: #c3c7d1;
+    --fg-color: white;
 }
 
 .bold {
     font-weight: 900;
 }
-
 .italic {
     font-style: italic;
 }
-
-/* Sizes */
 .small {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
-
 .medium {
-    font-size: 28px;
+    font-size: 1.75rem;
 }
-
 .big {
-    font-size: 35px;
+    font-size: 2.1875rem;
 }
-
 .bigger {
-    font-size: 50px;
-}
-/* End text sizes and styles */
-
-/* End sizes */
-
-div {
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    /*background-color: darkslateblue;*/
+    font-size: 3.125rem;
 }
 
-/* Pages */
-div.page {
+* {
+    font-family: "Fira Code", monospace;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html,
+body {
     height: 100%;
+    background-color: var(--bg-color);
 }
 
-/* .pg1 {
-    border: 0.5em dashed #ff616e;
-} */
+body {
+    margin: 0;
+    padding: 0 10px;
 
-.pg1 .center {
+    color: var(--fg-color);
+}
+
+code {
+    background-color: var(--code-bg-color);
+    display: inline-block;
+
+    border-radius: 9px;
+    padding: 0.3rem 1rem;
+}
+
+code,
+code * {
+    vertical-align: middle;
+}
+
+#hero {
     display: flex;
     justify-content: center;
 }
 
-div.halfpage {
-    position: relative;
-    height: 51%;
-}
-/* End pages */
-
-.nomargin {
-    margin: 0px;
-}
-
 #hello_friend {
-    margin: 0px;
-    position: absolute;
+    margin: 0;
     top: 50%;
-    -ms-transform: translate(0%, -50%);
+
+    position: absolute;
+
     transform: translate(0%, -50%);
     text-align: center;
 }
@@ -147,13 +80,6 @@ div.halfpage {
 .typewriter-cursor {
     opacity: 0;
     animation: blink 800ms step-start 0s infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .typewriter-cursor {
-        opacity: 1;
-        animation: none;
-    }
 }
 
 @keyframes blink {
@@ -168,37 +94,9 @@ div.halfpage {
     }
 }
 
-#scroll_down {
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-#whoami {
-    color: #ff2c83;
-}
-
-/* Arrow */
-.arrow {
-    animation: arrow_slide 1s ease-in-out infinite;
-    margin-left: 9px;
-}
-
-@keyframes arrow_slide {
-    0%,
-    100% {
-        transform: translate(0, 0);
-    }
-
-    50% {
-        transform: translate(0, 10px);
+@media (prefers-reduced-motion: reduce) {
+    .typewriter-cursor {
+        opacity: 1;
+        animation: none;
     }
 }
-/* End arrow */
