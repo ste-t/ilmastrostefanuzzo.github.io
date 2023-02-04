@@ -1,4 +1,4 @@
-const typewriter = new Typewriter("#hello_friend_text", {
+const typewriter = new Typewriter("#hello-friend-text", {
     strings: [
         "Hello friend",
         "Ciao amico",

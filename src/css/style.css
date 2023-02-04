@@ -71,11 +71,12 @@ code * {
     overflow-x: visible;
 
     display: flex;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
 }
 
-#hello_friend {
+#hello-friend {
     margin: 0;
     flex-shrink: 0;
 }
