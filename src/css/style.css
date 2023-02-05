@@ -71,7 +71,7 @@ code * {
     overflow-x: visible;
 
     display: flex;
-    flex-flow: column;
+    /* flex-flow: column; */
     align-items: center;
     justify-content: center;
 }
